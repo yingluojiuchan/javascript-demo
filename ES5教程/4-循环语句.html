@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4-循环语句</title>
+</head>
+<body>
+    <script>
+        var i=[1,2,3,4,5,6]
+        
+        for(var j=0;j<6;j++){
+            //代码块开始前执行的命令（可移至到代码块前）；判断是否运行代码块（{}里的代码）的条件；代码块执行后执行的命令（可移至到代码块中）
+            document.write(i[j]+"<br>")
+        }
+        
+        var k
+        for(k in i){
+            //同python
+            document.write(i[k]+"<br>")
+        }
+
+        var a=1
+        while(a<10){
+            //while后括号里为条件
+            document.write("a="+a+"<br>")
+            i++
+        }
+
+        var b=1
+        do{
+            document.write("b="+b+"<br>")
+            i++
+        }
+        while(b<10)
+        //do先执行一次，再while判断
+    </script>
+</body>
+</html>

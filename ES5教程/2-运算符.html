@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-运算符</title>
+</head>
+<body>
+    <script>
+       
+        var a="1"
+        var b=1
+        document.write(g+h+"<br>")
+        //若+运算符两边存在一个字符串，将另一个也转化为字符串进行字符串拼接
+        
+        var c =10
+        var d=++c
+        document.write(b+"<br>")
+        //前置递增是包含它的语句被执行前变量+1，前置递减是包含它的语句被执行前是运算前变量-1
+        
+        var e =10
+        var f=e++
+        document.write(d+"<br>")
+        //后置递增是包含它的语句被执行前后变量+1，后置递减是包含它的语句被执行后变量-1
+
+        var g ="10"
+        var h =10
+        document.write(g===h+"<br>")
+        //> < >= <= == !=会把num、bool和str型转化为num型再比较
+        //js中===、!===两边的值直接比较
+
+        var i=12
+        document.write(i>10?"i大于10":"i小于10")
+        //condition?value1:value2
+    </script>
+</body>
+</html>

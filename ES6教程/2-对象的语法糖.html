@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //属性的增强方法
+        const name = 'kobe'
+        const age = 18
+        const height = 1.88
+        //ES5写法
+        /*const obj = {
+             name:name,
+            age:age
+            height:height
+        } 
+         */
+        //ES6写法
+        const obj = {
+            name,
+            age,
+            height
+        }
+
+        console.log(obj)
+
+        //2.方法的增强写法
+       /*  ES5的写法
+        const obj = {
+            run: function (){
+
+            },
+            eat: function (){
+
+            }
+        } */
+        const obj={
+            run(){
+
+            },
+            eat(){
+
+            }
+        }
+    </script>
+</body>
+
+</html>

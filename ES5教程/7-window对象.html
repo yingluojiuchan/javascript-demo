@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="open()">打开6-事件.html</button><br>
+    <button onclick="close()">关闭当前窗口</button><br>
+    <script>
+        /* window对象指当前浏览器窗口。
+        所有全局JavaScript对象，函数和变量都会自动成为window对象的成员。
+        全局变量是窗口对象的属性，全局函数是窗口对象的方法，甚至HTML DOM的文档对象也是window对象的属性之一
+        所有window可省略 */
+        window.document.write("Hello"+"<br>")
+        document.write("高度："+window.innerHeight+",宽度："+window.innerWidth)
+        //window.innerHeight 浏览器窗口的内部高度(不包括工具栏和滚动条)
+        //window.innerWidth 浏览器窗口的内部高度(不包括工具栏和滚动条)
+
+        function open(){
+            window.open("6-事件.html","name","height=200,width=200,left=100")
+        }
+        /* window.open(URL,name,specs)  打开一个新的浏览器窗口
+        URL：可选，打开指定的页面的URL。若没有指定URL，打开一个新的空白窗口
+        name：指定窗口的名称。
+        specs:	可选。一个逗号分隔的项目列表。支持以下值： 
+            height=pixels	窗口的高度。最小值为100
+            left=pixels	该窗口的左侧位置
+	        width=pixels 窗口的宽度.最小值为100*/
+        
+        function close(){
+            window.close()/* 关闭当前窗口 */
+        }
+    </script>
+</body>
+</html>

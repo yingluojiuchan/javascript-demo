@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 引用自定义模块路径必须有./或../，导入npm包不要js，模块在html后解析    -->
+<script type="module">  
+//1. 按需导入
+    import {school,teach} from "./js/命名导出.js"
+    console.log(school);
+    console.log(teach);
+
+    //导入默认模块    import 接受名称 from '模块标识符'   接受名称符合变量名规范即可   
+    import m3 from "./js/m3.js"
+    console.log(m3) 
+</script>
+
+<script type="module"> 
+    // 2.导入整个模块
+    import * as m2 from "./js/m2.js"
+    console.log(m2)
+    console.log(m2.school) 
+</script>
+
+<script type="module">   
+//3.别名导出
+    import {school as guigu,findJob} from "./js/命名导出.js" 
+    console.log(guigu,findJob);
+</script>
+
+</body>
+</html>

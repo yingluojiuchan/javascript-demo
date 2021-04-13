@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+         1.存在形式及意义
+
+一般情况下为URL后 "#" 及其后面一部分组成，如http://www.test.com/#/something，
+
+其中http://www.test.com为真实的路径，而#/something则为网页中的位置，称之为锚点
+
+在访问锚点时会自动跳到锚点所在的网页位置，通常有两种方式作为锚点
+
+<a name="something"></a>
+
+<element id="something"></element>
+
+以上两种均可通过http://www.test.com/#/something使页面滚动到该元素的位置
+
+2.hash的读写
+
+location.hash可读可写的
+
+//当前URL为http://www.test.com/#/something
+location.hash;		        //输出 #/something
+ 
+location.hash = '#/test1';	//http://www.test.com/#/test1,并且会新增一条历史记录
+在对hash写时有个需要注意的地方，如下所示
+
+//当前URL为http://www.test.com/
+location.hash = "#/test"	//http://www.test.com/#/test
+locationl.hash = "/#/test"	页面修改为//http://www.test.com/#/#/test
+当写入第一个字符不为为 "#" 时会自动生成一个 "#" 在字符串之前，再把字符串追加到生成的#后面
+
+这样会造成有两个#,此时location.hash输出 "#/#/test" -->
+</body>
+</html>
