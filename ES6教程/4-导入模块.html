@@ -7,14 +7,14 @@
 </head>
 <body>
 
-    <!-- 引用自定义模块路径必须有./或../，导入npm包不要js，模块在html后解析    -->
+    <!-- 引用自定义模块路径必须有./或../，导入npm包后缀名禁带.js，解析html后解析模块   -->
 <script type="module">  
 //1. 按需导入
     import {school,teach} from "./js/命名导出.js"
     console.log(school);
     console.log(teach);
 
-    //导入默认模块    import 接受名称 from '模块标识符'   接受名称符合变量名规范即可   
+    //导入默认模块    import 别名 from '模块标识符'   
     import m3 from "./js/m3.js"
     console.log(m3) 
 </script>
