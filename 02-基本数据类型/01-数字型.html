@@ -9,14 +9,41 @@
 
 <body>
     <script>
-        var num = 1
-        document.write(num + "<br>")
-        // 数字型
-        var NaN = NaN
-        document.write(NaN + "<br>")
-        // 特殊数字型NaN，Not a number，代表一个非数值
+    // 1. 八进制    数字前加0 表示八进制
+    var num1 = 010;
+    document.write(num1 + "<br>"); //  010  八进制 转换为 10进制 就是  8 
+   
+    // 2.十进制
+    var num2 = 10
+    document.write(num2 + "<br>")
+        
+    // 3. 十六进制  0 ~ 9  a ~ f  数字的前面加 0x 表示十六进制
+    var num3 = 0x9;
+    document.write(num3 + "<br>")
 
-        var arr1 = [1, 2, 3]
+    // 4. 数字型的最大值
+    document.write(Number.MAX_VALUE + "<br>");
+    
+    // 5. 数字型的最小值
+    document.write(Number.MIN_VALUE + "<br>");
+    
+    // 6. 无穷大
+    document.write(Number.MAX_VALUE + "<br>");// Infinity 正无穷大
+    document.write(Number.MAX_VALUE * 2 + "<br>"); // Infinity 正无穷大  
+    document.write(-Number.MAX_VALUE + "<br>"); // -Infinity 负无穷大
+    
+    // 7. 非数字
+    console.log('pink老师' - 100); // NaN，即非数值(Not a number),表示一个本要返回数值的操作数未返回数值的情况
+    var NaN = NaN
+    document.write(NaN + "<br>")// NaN
+    console.log(isNaN(12)); // false
+    console.log(isNaN('pink老师')); // true
+    /* isNaN(value) 函数判断值是否为NaN   
+    value：要被检测的值
+    返回 true    NaN
+         false   非NaN */
+           
+    var arr1 = [1, 2, 3]
         document.write(arr1[0] + "<br>")
         //数组赋值方法1       
         var arr2 = new Array(1, 2, 3)
@@ -29,11 +56,6 @@
         document.write(arr3[0] + "<br>")
     //数组赋值方法13
     //array类型
-
-
-
-
-
     </script>
 </body>
 

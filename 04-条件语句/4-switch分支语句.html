@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-条件语句</title>
+</head>
+
+<body>
+    <script>
+        var j = 1
+        switch (j) {
+            case 1:
+                document.write("i=1")
+                break
+            //break中止当前循环或switch语句 
+            //continue结束当前循环，进行下次循环  
+            case 2:
+                document.write("i=2")
+                break
+            default:
+                document.write("条件不满足case")
+                break
+        }
+        /*  switch (expression) {
+                case value1:
+                    执行语句1;
+                    break;
+                case value2:
+                    执行语句2;
+                break;
+                    ...
+                default:
+                    执行最后的语句; */
+        /* expression：用来与case子语句匹配的表达式。
+           case valueN：可选，用来匹配expression的case子句。若expression与valueN相匹配（要求两个值===），则直接执行该case子句中的执行语句直到该switch语句结束（不管后面的valueN是否与expression相匹配）或遇到一个break。
+           default：可选，一个default子句。如果给定，该子句会在expression的值与任一case语句均不匹配时执行。 */
+
+    </script>
+</body>
+
+</html>

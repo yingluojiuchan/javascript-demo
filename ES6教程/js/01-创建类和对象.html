@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 创建Star类 
+        class Star {
+            constructor(uname, age) {
+                this.uname = uname;
+                this.age = age;
+                /* constructor是初始化class创建的对象的特殊方法，它接受其实例传递的参数new生成实例时自动调用constructor函数；
+                执行如下操作：
+                1.在内存中创建一个prototype属性添加了私有属性和方法的新对象
+                2.构造函数内部的this指向新对象
+                3.执行构造函数内部的代码，给新对象添加属性
+                4.若构造函数返回非空对象，则返回该对象；否则，返回刚创建的新对象
+                   如果没有显式指定构造方法，则类会添加默认的constructor方法； 
+                   对于基类，默认构造函数是：
+                   constructor() {}
+                   对于派生类，默认构造函数是：
+                   constructor(...args) {
+                   super(...args);
+                   }
+                   类块中定义的方法作为原型方法
+                   */
+            }
+            sing(song) {
+                console.log(this.uname + song);// 添加方法不能用ES5写法，只能用ES6写法,类中的方法定义在prototype里，对象的__proto__的属性指向实例化该对象的类的prototype
+            }
+
+        }
+        /* class 类名 {
+            constructor(参数) {
+                属性
+            }
+           } */
+        /* 类名习惯性定义首字母大写 */
+        /* // 多个函数方法之间不需要添加逗号分隔 */
+
+        // 2. star类创建对象
+        var ldh = new Star('刘德华', 18);
+        /* 返回{uname:'刘德华',
+                age:18,
+                sing(song) {
+                    console.log(this.uname + song)
+                }
+                } */
+        /* new 类名(参数)  返回类创建的对象  
+        参数传给类的constructor函数 */
+        console.log(ldh);
+        ldh.uname;
+        ldh.sing('冰雨');
+        console.log(Star);
+    </script>
+</body>
+
+</html>

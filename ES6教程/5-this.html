@@ -32,11 +32,12 @@ f1() === globalThis;//在Node中：全局对象是globalThis
 
 var o = {
   prop: 37,
-  f: function() {
+  f() {
     return this.prop;
   }
 };
 console.log(o.f()); // 37 ，当 o.f() 被调用时，函数内的 this 将绑定到 o 对象。
+/* this引用的是函数执行的环境对象 */
 </script>
 </body>
 </html>

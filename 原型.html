@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- __proto__：对象的一个属性:对象{},指向创建该对象的函数对象的prototype
+        prototype：函数的一个属性:对象{}
+        constructor：显式原型对象的一个属性:对象的构造函数，Function是根构造函数，其构造函数是本身
+        
+    使用一个对象的属性或方法时，会先在自身中寻找，自身中如果有，则直接使用，若没有，则去原型对象中寻找；
+    若原型对象有，则使用，若没有，则去原型的原型中寻找，直到找到Object对象的原型；
+    若在Object原型中依然没有找到，则返回null -->
+</body>
+<script>
+
+    function Test(){}
+    const test =new Test()
+    
+    console.log(Test.prototype);
+    console.log(test.__proto__)
+    console.log(test.__proto__===Test.prototype)//true
+    /* test.__proto__指向Test.prototype */
+    
+    console.log(Test.prototype.__proto__)
+    console.log(Object.prototype)//javascript中的其他对象都继承了Object.prototype中的属性和方法
+    console.log(Test.prototype.__proto__===Object.prototype);//true
+    /* Test.prototype.__proto__指向Object.prototype */
+
+    var Person = {
+                name: 'jessica',
+                age: 27
+    }
+    /* Object、Function是js自带的函数对象，因此Objet也有prototype */
+    console.log(Test instanceof Object )//true
+    /* 函数是Object的实例 */
+    console.log(Object instanceof Function)//true
+    /* Object是Function的实例 */
+        
+    console.log(Object.__proto__ === Function.prototype); //true
+    /* Object.__proto__指向Function.prototype */
+    
+    console.log(Object.prototype.__proto__)//null
+    
+    console.log(Object.constructor === Function); //true
+    /* Function是Object对象的构造函数 */
+    
+    console.log(Function.constructor === Function); //true
+    /* Function其构造函数是本身 */
+
+</script>
+
+</html>
