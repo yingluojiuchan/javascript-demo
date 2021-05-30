@@ -27,9 +27,10 @@
         button.onclick = function () {
             alert("clicked");
         }
+        //button.onclick是对象属性
     </script>
 
-    <!-- 3.DOM2级事件处理程序 -->
+    <!-- 3.DOM2级事件处理程序 推荐-->
     <!-- DOM2级事件流：先捕获后冒泡
             事件捕获阶段：window元素向下触发事件到最具体元素
             事件冒泡阶段：最具体元素向上（直到window元素）触发事件 
@@ -49,18 +50,18 @@
 
         document.getElementById("div").addEventListener("click", function showDiv() { alert("div") })
         document.getElementById("aid").addEventListener("click", showA)
-        function showType(event) {
+        function showType() {
             alert(event.type)
             alert(event.target)
             event.stopPropagation()
             //onclick是绑定事件，click是方法，作用是触发onclick事件
             //event.type 获取事件类型
-            //event.target 获取事件目标
+            //event.target 获取事件目标，即发生事件的元素
             //event.stopPropagation() 阻止事件流的进一步传播
         }
 
-        //触发DOM2级事件时，会产生一个event对象。DOM事件处理函数形参第一个参数默认event对象
-        function showA(e) {
+        //触发DOM2级事件时，会默认传入event对象。event或e代表event对象
+        function showA() {
             e.stopPropagation()
             e.preventDefault()
             //event.preventDefault() 阻止特定事件默认行为（只有cancelable属性设置为true的时间才能用它阻止）
