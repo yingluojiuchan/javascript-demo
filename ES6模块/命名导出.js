@@ -1,5 +1,5 @@
 //命名导出
-let  school="尚硅谷"
+let school="尚硅谷"
 function teach() {
     console.log("我们可以教给你开发技能")
 }
