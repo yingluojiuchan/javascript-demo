@@ -1,10 +1,10 @@
 //命名导出
 let school="尚硅谷"
-function teach() {
+export function teach() {
     console.log("我们可以教给你开发技能")
 }
 
-export { school, teach } //导出本模块中的私有成员，供其他模块使用
+export { school } //导出本模块中的私有成员，供其他模块使用
 
 /* export let school = "尚硅谷"
 export function teach() {
