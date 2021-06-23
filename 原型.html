@@ -37,8 +37,8 @@
                 age: 27
     }
     /* Object、Function是js自带的函数对象，因此Objet也有prototype */
-    console.log(Test instanceof Object )//true
-    /* 函数是Object的实例 */
+    console.log(Test instanceof Function )//true
+    /* 函数是Function的实例 */
     console.log(Object instanceof Function)//true
     /* Object是Function的实例 */
         
@@ -52,7 +52,7 @@
     
     console.log(Function.constructor === Function); //true
     /* Function其构造函数是本身 */
-/* 对象是函数创建的，而函数却又是一种对象 */
+/* 引用数据对象是构造函数创建的对象，函数是Function的实例，而Function由Object.prototype对象（即Object对象）创建 */
 </script>
 
 </html>

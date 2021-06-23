@@ -23,12 +23,14 @@
             this.sing = function(sang) {
                 console.log(sang);
             //实例方法
-            }
+            }    
         }
-        Star.a=1//静态属性
-        Star.b.sang = function (sang) {
-                console.log(sang);//静态方法
+        Star.c=1//函数外添加函数静态属性
+        Star.d = function (sang) {
+                console.log(1);//函数外添加函数静态方法
         }
+        console.log(Star.c)
+        console.log(Star.d())
         var ldh = new Star('刘德华', 18, '男'); // 调用函数返回的是一个对象
         // console.log(typeof ldh);
         console.log(ldh.name);
