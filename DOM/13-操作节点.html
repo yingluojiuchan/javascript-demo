@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul  id="ul">
+        <li>123</li>
+    </ul>
+    <button id="btn1">按钮</button>
+    <script>
+        // 1. 创建节点元素节点
+        var li = document.createElement('li');
+        /* var element = document.createElement(tagName) 创建一个由tagName指定的HTML元素，并返回由tagName指定的HTML元素对象
+        tagName 要创建元素类型的字符串 */
+        // 2. 添加节点 node.appendChild(child)  node 父级  child 是子级 后面追加元素  类似于数组中的push
+        var ul = document.querySelector('ul');
+        li.appendChild(document.createTextNode("data"));
+        /* document.createTextNode(data) 创建一个文本节点并返回文本节点对象。
+        data：str，放入文本节点的内容*/
+        ul.appendChild(li);
+        /* element.appendChild(aChild) 将一个节点附加到指定父节点的子节点列表的末尾处并返回追加后的子节点对象
+            aChild 追加给父节点的节点对象。*/
+        document.getElementById("btn1").addEventListener("click", function () { document.getElementById("ul").removeChild(li) })
+            /* element.removeChild(child) 从父节点中删除一个子节点并返回删除的节点对象。
+            child 要移除的子节点对象*/
+
+    </script>
+</body>
+
+</html>

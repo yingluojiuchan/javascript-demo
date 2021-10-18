@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-函数</title>
+</head>
+
+<body>
+    <script>
+        function demo(a, b) {
+            var sum = a + b
+            console.log(sum);
+            return sum
+        }
+        console.log(demo(20, 10))
+ 
+        /*
+        function 函数名（形参）{
+                函数体
+            }
+        函数名（实参）
+         */
+        /* return语句终止函数的执行，并返回值给函数调用者。 */
+        /* 函数名是指向函数的指针，函数是实例化Function类型的对象*/
+        console.log(demo)
+        console.log(typeof demo);//function
+        
+        // 1. 如果实参的个数和形参的个数一致 则正常输出结果
+        demo(1, 2);
+        // 2. 如果实参的个数多于形参的个数  会取到形参的个数 
+        demo(1, 2, 3);
+        // 3. 如果实参的个数小于形参的个数  多于的形参定义为undefined  最终的结果就是 NaN
+        // 形参可以看做是不用声明的变量  num2 是一个变量但是没有接受值  结果就是undefined 
+        demo(1); // NaN
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="pushHistory()">添加state</button>
+    <button onclick="replaceHistory()">替换state</button>
+    <button onclick="back()">后退</button>
+    <script>
+        const pushHistory = () => {
+            history.pushState('', '', "http://127.0.0.1:5502/1.html")
+        }
+        const replaceHistory = () => {
+            history.replaceState('', '', "/1.html")
+        }
+        const back = () => {
+            history.back()//后退到上一个路由，在8-history对象前置网页.html打开，跳转到html教程\1-常用标签.html
+        }
+        /* history.pushState(state, title [, url])   修改location对象的属性值且state添加到当前浏览器会话的历史堆栈（history对象）中的顶部state上，而不刷新页面。
+           history.replaceState(obj,title,url)  修改location对象的属性值且state替换当前浏览器会话的历史堆栈（history对象）中的顶部state，而不刷新页面。
+                state：一个与添加的记录相关联的状态对象
+                title：新页面标题。但现在所有浏览器都忽视这个参数，所以建议传入空字符串或null
+                url：绝对|相对url，live server启动项目以当前文件夹所处目录为根目录。url必须和当前url同源（同源：协议、全域名、端口同时相同） */
+        /* popstate事件：浏览器会话的历史堆栈变化时触发popstate事件。popstate事件的state属性为history对象的state。 */
+    </script>
+</body>
+
+</html>
