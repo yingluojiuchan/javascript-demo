@@ -9,12 +9,13 @@
 
 <body>
     <script>
+        console.log(demo(20, 10))
         function demo(a, b) {
             var sum = a + b
             console.log(sum);
             return sum
         }
-        console.log(demo(20, 10))
+        
  
         /*
         function 函数名（形参）{
@@ -24,6 +25,7 @@
          */
         /* return语句终止函数的执行，并返回值给函数调用者。 */
         /* 函数名是指向函数的指针，函数是实例化Function类型的对象*/
+        /* 函数声明会提前到当前作用域最顶端 */
         console.log(demo)
         console.log(typeof demo);//function
         
