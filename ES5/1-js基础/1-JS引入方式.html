@@ -12,16 +12,16 @@
 
 <body>
     <!-- 1. 行内引入  -->
-    <!-- <input type="button" value="唐伯虎" onclick="alert('秋香姐')"> -->
+    <input type="button" value="唐伯虎" onclick="alert('秋香姐')">
     <!-- HTML使用双引号，JS使用单引号 -->
 </body>
 <!-- 2.内部引入 -->
 <script>
-        // alert('沙漠骆驼');
+        alert('沙漠骆驼');
 </script>
 <!-- 3. 外部引入 -->
 <script src="my.js"></script>
 <!-- <script src="路径"></script>
         使用src的script元素不应包含其他js代码，即使有js代码，也会被忽略 -->
-
+<!-- 按script顺序执行脚本，不同script属于同一个全局作用域 -->
 </html>
